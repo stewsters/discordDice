@@ -11,6 +11,7 @@ import java.io.File
 
 val parser = DefaultDiceParser();
 val roller = DiceRoller();
+// This file contains the discord token.  Dont commit it.
 val BOT_TOKEN = File(".token").readText()
 
 // To add this to your server, use this url
@@ -18,14 +19,9 @@ val BOT_TOKEN = File(".token").readText()
 suspend fun main() {
     bot(BOT_TOKEN) {
 
-        messageCreated {
-            //println(it)
-            if (it.content.contains("diskord")) {
-                it.react("wut")
-            }
-        }
         commands ("/"){
 
+            // to use this, /roll 3d20 + 2d6
             command("roll") {
                 println(this.content)
 
@@ -38,18 +34,6 @@ suspend fun main() {
 
                 reply(response)
             }
-
-            command("ping") {
-                println("Ping")
-                reply("pong")
-                delete()
-            }
-
-            command("echo") {
-                reply(words.drop(1).joinToString(" "))
-                delete()
-            }
-
 
         }
     }
