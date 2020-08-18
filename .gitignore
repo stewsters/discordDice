@@ -2,3 +2,4 @@
 out/
 .token
 .gradle/
+/build/
