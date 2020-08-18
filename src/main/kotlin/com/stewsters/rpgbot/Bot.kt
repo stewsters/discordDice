@@ -5,7 +5,6 @@ import com.bernardomg.tabletop.dice.parser.DefaultDiceParser
 import com.jessecorbett.diskord.dsl.bot
 import com.jessecorbett.diskord.dsl.command
 import com.jessecorbett.diskord.dsl.commands
-import com.jessecorbett.diskord.util.words
 import java.io.File
 
 
